@@ -13,7 +13,7 @@ provider "kubernetes" {
 
 
 resource "kubernetes_deployment" "nginx" {
-  count = 0
+  count = 1
 
   metadata {
     name = "nginx"
@@ -65,8 +65,9 @@ resource "kubernetes_deployment" "nginx" {
 }
 
 
+
 resource "kubernetes_service" "service" {
-  count = 0
+  count = 1
   metadata {
     name = "nginx"
     annotations = {
@@ -92,7 +93,7 @@ resource "kubernetes_service" "service" {
     }
 
     selector = {
-      app = kubernetes_deployment.nginx.metadata[0].name
+      app = kubernetes_deployment.nginx.0.metadata[0].name
     }
   }
 }
