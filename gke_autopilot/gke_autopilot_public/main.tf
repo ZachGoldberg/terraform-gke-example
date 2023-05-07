@@ -3,7 +3,6 @@ provider "google" {
   region  = var.region
 }
 
-
 resource "google_container_cluster" "gke" {
   name = var.name
 

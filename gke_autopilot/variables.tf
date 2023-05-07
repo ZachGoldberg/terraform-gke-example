@@ -3,7 +3,7 @@ variable "google_service_account" {
 }
 
 variable "project" {
-  default = "zach-gke-demo-test"
+  default = "zachg-oreilly-test"
 }
 
 variable "region" {

@@ -92,7 +92,7 @@ resource "kubernetes_service" "service" {
     }
 
     selector = {
-      app = kubernetes_deployment.nginx.metadata[0].name
+      app = kubernetes_deployment.nginx.0.metadata[0].name
     }
   }
 }
