@@ -1,6 +1,6 @@
 
 
-module "autopilot_cluster" {
+module "standard_cluster" {
   source  = "./gke_public"
   name    = "test-standard-cluster"
   project = var.project
